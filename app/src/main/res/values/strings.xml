@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ElderlySOS</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="help_message">救命~</string>
+    <string name="call_message">打电话~</string>
     <string name="action_settings">Settings</string>
+
 </resources>
