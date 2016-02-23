@@ -1,9 +1,12 @@
 package xyzinc.elderlysos;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        help();
+        call();
+        contacts();
+        settings();
     }
 
 
@@ -35,4 +42,41 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void help(){
+        Button button = (Button) findViewById(R.id.help);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Help!",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+    public void call(){
+        Button button = (Button) findViewById(R.id.call);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Call!",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+    public void contacts(){
+        Button button = (Button) findViewById(R.id.manage_contacts);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Contacts!",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+    public void settings(){
+        Button button = (Button) findViewById(R.id.settings);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(),"Settings!",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
 }
